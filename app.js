@@ -1,21 +1,27 @@
-var app=angular.module("myApp",["ngRoute"]);
+var app=angular.module("myApp",['ui.router']);
 
-app.config(["$locationProvider","$routeProvider",function($locationProvider,$routeProvider){
+app.config(["$locationProvider","$stateProvider",function($locationProvider,$stateProvider){
  $locationProvider.hashPrefix('')
-$routeProvider
-  .when("/Home",{
-
+$stateProvider
+  .state("Home",{
+   url:'/Home',
   	templateUrl:"pages/Home.html",
-  	controller:"myHomeController"
+  	controller:"myHomeController",
+  	caseInsensitiveMatch : true
   })
-   .when("/Register",{
+   .state("Register",{
+   	 url:'/Register',
       templateUrl:"pages/Register.html",
-      controller:"myRegisterController"
+      controller:"myRegisterController",
+      caseInsensitiveMatch : true
    })
-   .when("/Login",{
+   .state("Login",{
+   	url:'/Login',
       templateUrl:"pages/Login.html",
-      controller:"myLoginController"
+      controller:"myLoginController",
+      caseInsensitiveMatch : true
    })
+}])
 app.controller("myHomeController",["$scope",function($scope){
 	$scope.message="This is Angular Home Page";
 }])
@@ -25,5 +31,4 @@ app.controller("myRegisterController",["$scope",function($scope){
 app.controller("myLoginController",["$scope",function($scope){
 	$scope.message="This is Angular Login Page";
 }])
- console.log("this is config");
-}])
+ 

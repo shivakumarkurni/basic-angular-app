@@ -11,6 +11,7 @@
 <body>
 <script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular-route.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<div class="container">
 
@@ -19,11 +20,11 @@
 	     </div>	
    
         <ul class="nav nav-pills text-uppercase" style="float:right;margin-top:-80px; ">
-		      <li class="active"><a href="#/Home">Home</a></li>
-		      <li><a href="#/Register">Register</a></li>
-		      <li><a href="#/Login">Login</a></li>
+		      <li class="active"><a ui-sref="Home">Home</a></li>
+		      <li><a ui-sref="Register">Register</a></li>
+		      <li><a ui-sref="Login">Login</a></li>
         </ul>     	
-        <div ng-view></div>
+        <ui-view></ui-view>
 	</div>
 </body>
 </html>
