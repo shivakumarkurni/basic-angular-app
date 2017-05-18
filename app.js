@@ -16,7 +16,7 @@ $stateProvider
       caseInsensitiveMatch : true
    })
    .state("Login",{
-   	url:'/Login',
+   	url:'/Login/:id',
       templateUrl:"pages/Login.html",
       controller:"myLoginController",
       caseInsensitiveMatch : true
@@ -29,6 +29,6 @@ app.controller("myRegisterController",["$scope",function($scope){
 	$scope.message="This is Angular  Register Page";
 }])
 app.controller("myLoginController",["$scope",function($scope){
-	$scope.message="This is Angular Login Page";
+	$scope.message="This is Angular Login Page"+id;
 }])
  

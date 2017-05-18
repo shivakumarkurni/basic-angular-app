@@ -10,11 +10,11 @@ app.config(["$routeProvider",function($routeProvider){
 		 })
 		 .when("/About_us",{
 
-		 	templateUrl:"pages_application/Login.html",
+		 	templateUrl:"pages_application/About_us.html",
 		 	controller:"myLoginController"
 		 })
 		 .when("/Login",{
-		 	templateUrl:"pages_application/Register.html",
+		 	templateUrl:"pages_application/Login.html",
 		 	controller:"myRegisterController"
 		 })
 }])
